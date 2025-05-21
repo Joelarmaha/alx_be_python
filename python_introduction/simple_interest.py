@@ -8,5 +8,6 @@ I = P * R * T
 P = principal
 R = rate
 T = time
-interest =P * R * T
+I = P * R * T
+interest = float(I)
 print(f" the simple interest is : {interest}")
