@@ -21,9 +21,9 @@ def perform_operation(num1, num2, operation):
         if num2 != 0:
             return num1 / num2
         else:
-            return "Error: Division by zero is not allowed."
+            return "not valid."
     else:
-        return "Error: Invalid operation specified."
+        return "Invalid operation specified."
 
 from arithmetic_operations import perform_operation
 
