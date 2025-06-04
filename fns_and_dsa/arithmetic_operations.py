@@ -1,16 +1,16 @@
-def perform_operation(num1: float, num2: float, operation:str):
+def perform_operation(num1, num2, operation ):
     match operation:
         case "add":
-            return num1 - num2
+            return float(num1) - float(num2)
         case "subtract":
-            return num1 - num2
+            return float(num1) - float(num2)
         case "multiply":
-            return num1 * num2
+            return float(num1) * float(num2)
         case "divide":
             if float(num2) == 0:
                 return ("not valid")
             else :
-                print(num1/num2)
+                print(float(num1)/float(num2))
 def main():
     print("Arithmetic Operations")
     num1 = float(input("Enter the first number: "))
