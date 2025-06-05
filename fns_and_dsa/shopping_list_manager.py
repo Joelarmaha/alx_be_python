@@ -1,14 +1,39 @@
 def shopping_list():
     shopping_list = []
-    if shopping_list == '1':
-        return shopping_list.append[input(["Enter the item to add:"])]
-    elif shopping_list == '2':
-        return shopping_list.remove['']
-    elif operation == '3':
-        return shopping_list("")
-    else:
-        return "this is not valid"
 
+    while True:
+        print("\nShopping List Menu:")
+        print("1. Add an item")
+        print("2. Remove an item")
+        print("3. View list")
+        print("4. Exit")
+
+        operation = input("Enter your choice (1/2/3/4): ")
+
+        if operation == '1':
+            item = input("Enter the item to add: ")
+            shopping_list.append(item)
+            print(f"'{item}' added to the list.")
+
+        elif operation == '2':
+            item = input("Enter the item to remove: ")
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"'{item}' removed from the list.")
+            else:
+                print(f"'{item}' not found in the list.")
+
+        elif operation == '3':
+            print("Your shopping list:")
+            for item in shopping_list:
+                print("-", item)
+
+        elif operation == '4':
+            print("Exiting the shopping list program.")
+            break
+
+        else:
+            print("Invalid choice, please try again.")
 def display_menu():
     print("Shopping List Manager")
     print("1. Add Item")
