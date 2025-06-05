@@ -1,8 +1,7 @@
 def shopping_list():
     shopping_list = []
     if shopping_list == '1':
-        number = input('Enter the item to add: [""]')
-        return shopping_list.append['']
+        return shopping_list.append[input(["Enter the item to add:"])]
     elif shopping_list == '2':
         return shopping_list.remove['']
     elif operation == '3':
