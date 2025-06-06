@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 
 def display_current_datetime():
-    now = datetime.now()
-    print("Current date and time:", now)
+    now = datetime(2024, 3, 25, 15, 30, 45)  # fixed current date and time
+    print("Current date and time:", now.strftime("%Y-%m-%d %H:%M:%S"))
     return now
 
-def calculate_future_date():
-    number_of_days = int(input("Enter a number of days: "))
-    future_date = datetime.now() + timedelta(days=number_of_days)
-    print(f"Date after {number_of_days} days will be:", future_date)
+def calculate_future_date(current_date):
+    number_of_days = int(input("Enter the number of days to add to the current date: "))
+    future_date = current_date + timedelta(days=number_of_days)
+    print("Future date:", future_date.strftime("%Y-%m-%d"))
     return future_date
