@@ -1,8 +1,8 @@
-from datetime import datetime, timedelta
+import datetime
 
 def display_current_datetime():
+    current_date = datetime.datetime(2025, 2, 4, 12, 23, 10)
     now = datetime.datetime.now()
-    now = now.strftime("%2025-%6-%5 %23:%20:%2")
     print("Current date and time:", now)
     return now
 
