@@ -7,11 +7,11 @@ class BankAccount:
 
     def deposit(self):
         self.deposit = int(input("Deposit:"))
-        return (f' Current Balance: {self.display_balance}')
+        return (f' Current Balance: {self.deposit}')
 
     def withdraw(self):
         self.withdraw = int(input("Deposit:"))
-        return (f' Current Balance: {self.display_balance}')
+        return (f' Current Balance: {self.withdraw}')
 
     def display_balance(self):
         self.display_balance = current_balance
