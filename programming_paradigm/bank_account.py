@@ -14,7 +14,7 @@ class BankAccount:
         return self.withdraw
 
     def display_balance(self):
-        self.display_balance() == self.account_balance
+        self.display_balance = current_balance
 
 import sys
 from bank_account import BankAccount
