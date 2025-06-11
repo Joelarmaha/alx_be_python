@@ -6,20 +6,15 @@ class BankAccount:
         self.display_balance = current_balance
 
     def deposit(self):
-        self.deposit = int(input("Deposit:"))
-        return (f' Current Balance: {self.deposit}')
-
+        return f' Current Balance: {self.deposit}
     def withdraw(self):
-        self.withdraw = int(input("Deposit:"))
-        return (f' Current Balance: {self.withdraw}')
+        return f' Current Balance: {self.withdraw}'
 
     def display_balance(self):
-        self.display_balance = current_balance
-        return (f' Current Balance: {self.display_balance}')
+        return f' Current Balance: {self.display_balance}'
 import sys
 from bank_account import BankAccount
-
-def main():
+    def main():
     account = BankAccount(100)  # Example starting balance
     if len(sys.argv) < 2:
         print("Usage: python main.py <command>:<amount>")
