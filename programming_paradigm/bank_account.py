@@ -1,20 +1,29 @@
 class BankAccount:
-    def __init__(self, account_balance , deposit, withdraw, current_balance):
+    def __init__(self, account_balance, withdraw, deposit, current_balance ):
         self.account_balance = account_balance
         self.deposit = deposit
         self.withdraw = withdraw
+        self.current_balance = current_balance
+
+    def deposit(self, amount):
+        if amount == 0:
+            self.account_balance = self.account_balance+ deposit
+            return f' Deposited: {self.deposit}'
+        else:
+            return "not valid"
+    def withdraw(self, amount):
+        if amount == 0:
+            self.account_balance = self.account_balance + amount
+            return f' Deposited: {self.withdraw}'
+        else:
+            return "not valid"
+    def display_balance(self, current_balance):
         self.display_balance = current_balance
-
-    def deposit(self):
-        return f' Current Balance: {self.deposit}
-    def withdraw(self):
-        return f' Current Balance: {self.withdraw}'
-
-    def display_balance(self):
         return f' Current Balance: {self.display_balance}'
 import sys
 from bank_account import BankAccount
-    def main():
+
+def main():
     account = BankAccount(100)  # Example starting balance
     if len(sys.argv) < 2:
         print("Usage: python main.py <command>:<amount>")
@@ -39,5 +48,3 @@ from bank_account import BankAccount
 
 if __name__ == "__main__":
     main()
-
-
