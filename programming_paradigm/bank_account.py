@@ -15,7 +15,7 @@ class BankAccount:
 
     def display_balance(self):
         self.display_balance = current_balance
-        return self.display_balance
+        return (f' Current Balance: {self.display_balance})
 
 import sys
 from bank_account import BankAccount
