@@ -1,9 +1,9 @@
 class BankAccount:
-    def __init__(self, account_balance , deposit, withdraw, display_balance):
+    def __init__(self, account_balance , deposit, withdraw, current_balance):
         self.account_balance = account_balance
         self.deposit = deposit
         self.withdraw = withdraw
-        self.display_balance = display_balance
+        self.display_balance = current_balance
 
     def deposit(self):
         self.deposit = int(input("Deposit:"))
