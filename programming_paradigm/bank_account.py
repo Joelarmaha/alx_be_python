@@ -14,8 +14,6 @@ class BankAccount:
             self.account_balance -= amount
             return (f"Withdrew:${amount}")
 
-        elif amount > self.account_balance:
-            return True
         else:
             return "Invalid withdrawal amount."
 
@@ -25,7 +23,6 @@ class BankAccount:
 
 import sys
 from bank_account import BankAccount
-
 
 def main():
     account = BankAccount(100)  # Example starting balance
