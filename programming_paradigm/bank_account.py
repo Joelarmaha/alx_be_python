@@ -14,7 +14,7 @@ class BankAccount:
             self.account_balance -= amount
             return (f"Withdrew:${amount}")
 
-        elif amount < self.account_balance:
+        elif amount > self.account_balance:
             print("Insufficient funds")
         else:
             return "Invalid withdrawal amount."
