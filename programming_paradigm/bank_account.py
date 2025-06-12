@@ -1,28 +1,28 @@
 class BankAccount:
-    def __init__(account, account_balance, withdraw, deposit, current_balance):
-        account.display_balance = None
-        account.account_balance = account_balance
-        account.deposit = deposit
-        account.withdraw = withdraw
-        account.current_balance = current_balance
+    def __init__(self, account_balance, withdraw, deposit, current_balance):
+        self.display_balance = None
+        self.account_balance = account_balance
+        self.deposit = deposit
+        self.withdraw = withdraw
+        self.current_balance = current_balance
 
-    def deposit(account, amount):
+    def deposit(self, amount):
         if amount > 0:
-            account.account_balance = account.account_balance + amount
+            self.account_balance = self.account_balance + amount
             return f' Deposited: {amount}'
         else:
             return "not valid"
 
-    def withdraw(account, amount):
+    def withdraw(self, amount):
         if amount != 0:
-            account.account_balance = account.account_balance - amount
+            self.account_balance = self.account_balance - amount
             print(f' Deposited: {amount}')
         else:
             return "not valid"
 
-    def display_balance(account, current_balance):
-        account.display_balance = current_balance
-        return f' Current Balance: {account.display_balance()}'
+    def display_balance(self, current_balance):
+        self.display_balance = current_balance
+        return f' Current Balance: {self.display_balance()}'
 
 
 import sys
