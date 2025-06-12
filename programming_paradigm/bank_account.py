@@ -1,5 +1,5 @@
 class BankAccount:
-    def __init__(self, account_balance):
+    def __init__(self, account_balance=0):
         self.account_balance = account_balance
 
     def deposit(self, amount):
@@ -13,8 +13,10 @@ class BankAccount:
         if 0 < amount >= self.account_balance:
             self.account_balance -= amount
             print(f"Withdrew:${amount}")
-        else:
+        elif amount < self.account_balance:
             return "Insufficient funds."
+        else:
+            return "Invalid withdrawal amount."
 
     def display_balance(self):
         return f"Current Balance:${self.account_balance}"
@@ -22,6 +24,7 @@ class BankAccount:
 
 import sys
 from bank_account import BankAccount
+
 
 def main():
     account = BankAccount(100)  # Example starting balance
@@ -45,6 +48,7 @@ def main():
         account.display_balance()
     else:
         print("Invalid command.")
+
 
 if __name__ == "__main__":
     main()
