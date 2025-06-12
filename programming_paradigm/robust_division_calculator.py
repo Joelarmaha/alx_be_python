@@ -5,7 +5,7 @@ def safe_divide(numerator, denominator):
         denom = float(denominator)
 
         # Perform division
-        result = num / denom
+        result = num/denom
         return f"Result: {result}"
 
     except ZeroDivisionError:
