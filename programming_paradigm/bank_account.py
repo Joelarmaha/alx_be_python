@@ -28,7 +28,7 @@ def main():
         print("Commands: deposit, withdraw, display")
         sys.exit(1)
 
-    command, *params = sys.argv[2].split(':')
+    command, *params = sys.argv[0].split(':')
     amount = float(params[0]) if params else None
 
     if command == "deposit" and amount is not None:
@@ -43,7 +43,6 @@ def main():
         print(account.display_balance())
     else:
         print("Invalid command.")
-
 
 if __name__ == "__main__":
     main()
