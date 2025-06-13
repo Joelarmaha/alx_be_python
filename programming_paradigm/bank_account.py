@@ -39,7 +39,7 @@ def main():
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
         else:
-            print("")
+            print()
     elif command == "display":
         print(account.display_balance())
     else:
