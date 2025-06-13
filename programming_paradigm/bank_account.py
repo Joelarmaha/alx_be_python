@@ -12,10 +12,8 @@ class BankAccount:
         if 0 < amount <= self.account_balance:
             self.account_balance -= amount
             return f"Withdrew:${amount}"
-        elif amount > self.account_balance:
-            return True
         else:
-            return "Invalid withdrawal amount."
+            return "Insufficient funds."
     def display_balance(self):
         return f"Current Balance:${self.account_balance}"
 import sys
@@ -36,11 +34,8 @@ def main():
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
-        elif amount > float(account):
-            print("Insufficient funds.")
         else:
-            print("not valid.")
-
+            print()
     elif command == "display":
         print(account.display_balance())
     else:
