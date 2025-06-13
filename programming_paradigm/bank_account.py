@@ -34,9 +34,11 @@ def main():
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
-        else:
+        elif amount > account:
             print("Insufficient funds.")
-            breakpoint()
+        else:
+            print("not valid.")
+
     elif command == "display":
         print(account.display_balance())
     else:
