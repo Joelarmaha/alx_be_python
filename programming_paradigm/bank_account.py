@@ -8,22 +8,16 @@ class BankAccount:
             return f"Deposited: ${amount}"
         else:
             return "Invalid deposit amount."
-
     def withdraw(self, amount):
         if 0 < amount <= self.account_balance:
             self.account_balance -= amount
-            return (f"Withdrew:${amount}")
-
+            return f"Withdrew:${amount}"
         else:
             return "Invalid withdrawal amount."
-
     def display_balance(self):
         return f"Current Balance:${self.account_balance}"
-
-
 import sys
 from bank_account import BankAccount
-
 def main():
     account = BankAccount(100)  # Example starting balance
     if len(sys.argv) < 2:
@@ -42,6 +36,7 @@ def main():
             print(f"Withdrew: ${amount}")
         else:
             print("Insufficient funds.")
+            breakpoint()
     elif command == "display":
         print(account.display_balance())
     else:
