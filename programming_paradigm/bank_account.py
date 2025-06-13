@@ -9,7 +9,7 @@ class BankAccount:
         else:
             return "Invalid deposit amount."
     def withdraw(self, amount):
-        if 0 < amount <= self.account_balance:
+        if  amount <= self.account_balance:
             self.account_balance -= amount
             return f"Withdrew:${amount}"
         else:
