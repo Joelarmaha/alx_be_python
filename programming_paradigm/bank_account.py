@@ -37,7 +37,7 @@ def main():
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
         elif amount > float(account):
-            print("Insufficient funds.")
+            return "Insufficient funds."
         else:
             print("not valid.")
 
