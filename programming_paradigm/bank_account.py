@@ -34,7 +34,7 @@ def main():
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
-        elif amount > float(BankAccount):
+        elif amount > float(account):
             print("Insufficient funds.")
         else:
             print("not valid.")
