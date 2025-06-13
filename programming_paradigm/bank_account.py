@@ -17,8 +17,10 @@ class BankAccount:
             return "Insufficient funds."
         else:
             return "Insufficient funds."
-def display_balance():
-    return f"Current Balance:${self.account_balance}"
+
+    def display_balance(self):
+        return f"Current Balance:${self.account_balance}"
+
 
 import sys
 from bank_account import BankAccount
