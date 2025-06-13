@@ -13,7 +13,7 @@ class BankAccount:
             self.account_balance -= amount
             return f"Withdrew:${amount}"
         elif amount > self.account_balance:
-            return "Insufficient funds."
+            return True
         else:
             return "Invalid withdrawal amount."
     def display_balance(self):
@@ -37,7 +37,7 @@ def main():
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
         elif amount > float(account):
-            return "Insufficient funds."
+            print("Insufficient funds.")
         else:
             print("not valid.")
 
