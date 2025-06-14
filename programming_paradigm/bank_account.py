@@ -3,7 +3,7 @@ class BankAccount:
         """Initialize a BankAccount instance with an optional initial balance."""
         self.account_balance = initial_balance  # Encapsulated attribute
 
-    def deposit(amount):
+    def deposit(self, amount):
         """Add the specified amount to the account balance."""
         if amount > 0:
             self.account_balance += amount
