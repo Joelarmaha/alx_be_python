@@ -7,7 +7,7 @@ class BankAccount:
         """Add the specified amount to the account balance."""
         if amount > 0:
             self.account_balance += amount
-            print(f"Deposited: ${amount}")
+            return f"Deposited: ${amount}"
         else:
             print("Deposit amount must be positive.")
 
