@@ -1,29 +1,34 @@
 class BankAccount:
-    def __init__(self, Current_Balance = 0):
-        self.account_balance = Current_Balance
+    def __init__(self, initial_balance=0.0):
+        """Initialize a BankAccount instance with an optional initial balance."""
+        self.account_balance = initial_balance  # Encapsulated attribute
 
-    def deposit(self, amount):
+    def deposit(amount):
+        """Add the specified amount to the account balance."""
         if amount > 0:
             self.account_balance += amount
-            return f"Deposited: ${amount}"
+            print(f"Deposited: ${amount:.2f}")
         else:
-            return "Invalid deposit amount."
+            print("Deposit amount must be positive.")
 
     def withdraw(self, amount):
-        if amount < self.account_balance and amount is not None:
+        """Withdraw the specified amount if funds are sufficient."""
+        if amount <= 0:
+            print("Withdrawal amount must be positive.")
+            return False
+        if amount <= self.__account_balance:
             self.account_balance -= amount
-            return f"Withdrew:${amount}"
-        elif amount > self.account_balance:
+            print(f"Withdrew: ${amount:.2f}")
             return True
         else:
+            print("Insufficient funds.")
             return False
 
-    def display_balance():
-        return BankAccount.__init__(self= , Current_Balance=)
-
+    def display_balance(self):
+        """Display the current account balance."""
+        print(f"Current Balance: ${self.account_balance:.2f}")
 import sys
 from bank_account import BankAccount
-
 
 def main():
     account = BankAccount(100)  # Example starting balance
@@ -32,7 +37,7 @@ def main():
         print("Commands: deposit, withdraw, display")
         sys.exit(1)
 
-    command, *params = sys.argv[0].split(':')
+    command, *params = sys.argv[1].split(':')
     amount = float(params[0]) if params else None
 
     if command == "deposit" and amount is not None:
@@ -44,10 +49,9 @@ def main():
         else:
             print("Insufficient funds.")
     elif command == "display":
-        print(account.display_balance())
+        account.display_balance()
     else:
         print("Invalid command.")
-
 
 if __name__ == "__main__":
     main()
