@@ -10,7 +10,11 @@ class Book:
     def __int__(self):
         return self.year
 
-    
+    def __repr__(self):
+        return self.file.read()
+
+    def __del__(self):
+        self.file.close()
 
 from book_class import Book
 
