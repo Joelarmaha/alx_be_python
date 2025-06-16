@@ -5,13 +5,13 @@ class Book:
         self.year = year
 
     def __str__(self):
-        return self.title and self.author
+        return "(title) by (author), published in (year)"
 
     def __int__(self):
         return self.year
 
     def __repr__(self):
-        return self.file.read()
+        return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __del__(self):
         self.file.close()
