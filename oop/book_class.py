@@ -14,7 +14,7 @@ class Book:
         return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __del__(self):
-        print(f' Deleting {self.title}')
+        print(f'Deleting {self.title}')
 
 from book_class import Book
 
@@ -30,6 +30,6 @@ def main():
 
     # Deleting a book instance to trigger __del__
     del my_book
-
+cd
 if __name__ == "__main__":
     main()
