@@ -5,7 +5,7 @@ class Book:
         self.year = year
 
     def __str__(self):
-        return "(title) by (author), published in (year)"
+        return f"{title} by {author}, published in {year}"
 
     def __int__(self):
         return self.year
