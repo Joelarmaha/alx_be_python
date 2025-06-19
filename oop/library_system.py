@@ -1,7 +1,14 @@
 class Book:
-    def __int__(self, title, author):
+    def __init__(self, title, author):
         self.title = title
         self.author = author
+
+    def __str__(self):
+        return self.title
+
+    def __str__(self):
+        return self.author
+
 
 class EBook(Book):
     def __init__(self, file_size):
@@ -30,6 +37,6 @@ class Library(Book, EBook, PrintBook):
     def add_book(self, book):
         book = Book + EBook + PrintBook
         return book
+
     def list_books(self):
         return books
-
