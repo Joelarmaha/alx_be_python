@@ -4,7 +4,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return self.title and self.author
+        return f"{self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -26,17 +26,15 @@ class PrintBook(Book):
 
 
 class Library:
-    def __init__(self, title, author, add_book, list_books):
-        self.title = title
-        self.author = author
-        self.add_book = add_book
-        self.list_books = list_books
+    def __init__(self):
+        self.books = []
 
-    def add_book(self, books):
-        self.books = books
-        self.books = [], "append"
-        return books
+    def add_book(self, book):
+        self.books.append(book)
 
-    def list_books(self, title, author):
-        super().__init__(title, author)
-        print(f"{title} by {author}")
+    def list_books(self):
+        if not self.books:
+            print("No books in the library.")
+        else:
+            for book in self.books:
+                print(book)
