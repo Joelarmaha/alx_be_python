@@ -28,14 +28,18 @@ class PrintBook(Book):
 class Library():
     books = [Book, EBook, PrintBook]
 
-    def __init__(self, add_book, list_books):
+    def __init__(self, title, author, add_book, list_books):
+        super().__init__(title, author)
         self.add_book = add_book
         self.list_books = list_books
 
     def add_book(self, books):
         self.books = books
         self.books = [], "append"
-        return book
+        return books
 
-    def list_books(self):
-        return f' {self.title} by {self.author}, {self.page_count}'
+    def list_books(self, title, author):
+        super().__init__(title, author)
+        return f' {title}by {author}, {Book}'
+
+
