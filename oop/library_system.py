@@ -24,13 +24,10 @@ class PrintBook(Book):
     def __int__(self):
         return self.page_count
 
-
 class Library(Book):
-
-    def __init__(self, title, author, add_book, list_books):
+    def __init__(self, title, author):
         super().__init__(title, author)
-        self.add_book = add_book
-        self.list_books = list_books
+        self.books = [], "append"
 
     def add_book(self, books):
         self.books = books
@@ -38,5 +35,4 @@ class Library(Book):
         return books
 
     def list_books(self, title, author):
-        super().__init__(title, author)
         print(f"{title} by {author}")
